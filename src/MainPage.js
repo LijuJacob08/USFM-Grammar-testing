@@ -6,7 +6,6 @@ import LeftSourceSelect from "./LeftSourceSelect";
 import CheckboxList from "./CheckboxList";
 import MarkerSelector from "./MarkerSelector";
 import axios from 'axios';
-import ReactJson from 'react-json-view'
 
 export default function MainPage() {
   const [selectedFileOnLeft, setSelectedFileOnLeft] = useState(null);
@@ -201,17 +200,12 @@ export default function MainPage() {
                 </div>
               </div>
               <div className="w-full  border-t h-5/6">
-              {/* {sourceFileFormat.name==='USJ'?
-              (fileContentOnLeft.length>0 &&
-              <ReactJson  src={fileContentOnLeft} />)
-              : */}
-                <textarea
+                 <textarea
                   className=" w-full h-full"
                   value={fileContentOnLeft}
                   onChange={handleTextareaChangeOnLeft}
                   readOnly={!selectedFileOnLeft}
                 />
-              {/* } */}
               </div>
             </div>
             <div className="border-3 h-72   md:h-full md:w-1/5 flex flex-col items-center justify-start border">
@@ -327,17 +321,12 @@ export default function MainPage() {
                 </div>
               </div>
               <div className=" border-t w-full  h-5/6">
-                 {/* {targetFileFormat.name==='USJ'?
-              (fileContentOnRight.length>0 &&
-              <ReactJson  src={fileContentOnRight} />)
-              : */}
                 <textarea
                   className=" w-full h-full"
                   value={fileContentOnRight}
                   onChange={handleTextareaChangeOnRight}
                   readOnly={!selectedFileOnRight}
                 />
-                {/* } */}
               </div>
             </div>
           </div>
